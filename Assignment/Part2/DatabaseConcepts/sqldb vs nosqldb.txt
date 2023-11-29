@@ -1,0 +1,32 @@
+              SQL                                                         NOSQL
+          ---------------                                           ----------------
+1. RELATIONAL DATABASE MANAGEMENT SYSTEM (RDBMS)         1. Non-relational or distributed database system.
+2. Vertically Scalable                                     2. Horizontally scalable
+3. These databases are best suited for complex           3. These databases are not so good for complex queries
+queries  
+4. These databases are not suited for hierarchical       4. These databases are best suited for hierarchical data storage.
+data storage.
+5. Follows ACID property                                   5. Follows CAP(consistency, availability, partition tolerance)
+6. SQL databases use SQL as their primary query          6. While some NoSQL databases have their query languages, many 
+language for defining and manipulating the data.            offer simple APIs for CRUD operations, often without a standardized query language like SQL.
+7. Data in SQL databases follows a predefined schema.    7. NoSQL databases can handle unstructured, semi-structured, and structured data, making them
+It requires a well-defined schema design before              more flexible for evolving data models.
+data insertion, ensuring data consistency.
+8. Examples: MySQL, PostgreSQL, Oracle, SQL Server,      8. Examples: MongoDB, Cassandra, Couchbase, Redis, Amazon DynamoDB.
+SQLite.
+
+
+
+
+Use Cases for SQL Databases:
+
+Transactions: Applications requiring complex transactions and strict consistency.
+Financial Systems: Banking, accounting, e-commerce where data integrity and consistency are critical.
+Relational Data: Applications that have structured and predefined relationships between entities.
+
+
+Use Cases for NoSQL Databases:
+
+Scalability and Performance: Applications requiring high throughput and scalability, especially in distributed environments.
+Big Data and Real-time Analytics: Handling large volumes of data, IoT (Internet of Things), and real-time analytics.
+Content Management Systems: Storing varied types of content (documents, images, videos) without a fixed schema.

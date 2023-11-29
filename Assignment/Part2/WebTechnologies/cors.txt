@@ -1,0 +1,47 @@
+CORS
+-----------------------
+Cross-origin resource sharing (CORS) is a mechanism for integrating applications. 
+CORS defines a way for client web applications that are loaded in one domain to
+interact with resources in a different domain. This is useful because complex
+applications often reference third-party APIs and resources in their 
+client-side code. For example, an application may use your browser to pull 
+videos from a video platform API, use fonts from a public font library. CORS allows
+the client browser to check with the third-party servers if the request 
+is authorized before any data transfers.
+
+
+Working of CORS:
+------------------------
+
+In standard internet communication, our browser sends an HTTP request to the application server, 
+receives data as an HTTP response, and displays it. In browser terminology, 
+the current browser URL is called the current origin and the third-party URL is cross-origin.
+
+When we make a cross-origin request, this is the request-response process:
+
+The browser adds an origin header to the request with information about the current origin's protocol, host, and port
+The server checks the current origin header and responds with the requested data and an Access-Control-Allow-Origin header
+The browser sees the access control request headers and shares the returned data with the client application
+Alternatively, if the server doesn’t want to allow cross-origin access, it responds with an error message.
+
+
+
+Example:
+--------------------
+For example, consider a site called https://weather.example.com. 
+This site wants to access resources from an API at holder-api.com.
+
+Developers at https://holder-api.com first configure the cross-origin 
+resource sharing (CORS) headers on their server by adding weather.example.com 
+to the allowed origins list. They do this by adding the below line to 
+their server configuration file.
+
+Access-Control-Allow-Origin: https://weather.example.com
+
+Once CORS access is configured, weather.example.com can request resources 
+from holder-api.com. For every request, holder-api.com will respond 
+with Access-Control-Allow-Credentials : "true." The browser then knows 
+the communication is authorized and permits cross-origin access.
+
+If you want grant access to multiple origins, use a comma-separated
+list or wildcard characters like * that grant access to everyone.

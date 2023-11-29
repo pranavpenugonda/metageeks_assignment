@@ -1,0 +1,41 @@
+.jobs-loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.bg-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.heading {
+  padding-bottom: 10px;
+}
+.success-bg-cont {
+  min-height: 100%;
+}
+.ul-list {
+  height: 100vh;
+  list-style-type: none;
+}
+.list-item {
+  background-color: #dce6d1;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.show-btn {
+  height: 32px;
+  width: 80px;
+  border-radius: 5px;
+  background-color: blue;
+  color: white;
+  font-family: "Roboto";
+  font-size: 16px;
+  border: 0px;
+  cursor: pointer;
+  outline: none;
+}

@@ -1,0 +1,40 @@
+
+//creating User Table
+CREATE TABLE User (
+  user_id INT PRIMARY KEY,
+  username VARCHAR(50) UNIQUE NOT NULL,
+  full_name VARCHAR(100),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+//creating Post Table
+CREATE TABLE Post (
+  post_id INT PRIMARY KEY,
+  user_id INT,
+  title VARCHAR(255) NOT NULL,
+  content TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES User(user_id)
+);
+
+
+//creating Comment Table
+CREATE TABLE COMMENT (
+  comment_id INT PRIMARY KEY,
+  user_id INT,
+  post_id INT,
+  content TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES User(user_id),
+  FOREIGN KEY (post_id) REFERENCES Post(post_id)
+);
+
+
+
+//query to find all posts created by a specific user,
+including the user details.
+SELECT Post.*, User.*
+FROM Post
+INNER JOIN User ON Post.user_id = User.user_id
+WHERE User.user_id = [specific_user_id];
